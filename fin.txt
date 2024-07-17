@@ -1,0 +1,32 @@
+თქვენი ამოცანაა დააპროგრამოთ ჭკბიანი სახლის ავტომატიზაციის სისტემა
+
+შექმენით DEVICE კლასი შემდეგი ატრიბუტებით:string deviceid, string deviceName boolean isOn.
+encapsulation:დარწმუნდით რომ device სტრიბუტები, ისევე როგორც მისი subclass-ები არის private,
+თუმცა მათი getter და setter მეთოდები არის  public
+
+შექმენით device-ის subclass-ები შემდეგი სახელებით:Light, Thermostat, securityCamera თითოეულს უნდა ჰქონდეს 
+თავისი უნიკალური სპეციფიკური ატრიბუტი:
+light-brightness;
+thermostat-temperature;
+securityCamera-resoultion;
+inheritence: დარწმუნდით რომ თითოეული მათგანი იქნება device-ს მემკვიდრე
+
+polymorphism: override გაუკეთეთ toString მეთოდს თითოეულ დივაისში, რათა გამოიტანოთ მოწყობილობის დეტალები.
+
+შექმენით abstract კლასი   smartDevice და საშუალება მიეცით device-ს და მის 
+subclass-ებს დააიქსთენდონ ის(დაიმემკვიდრონ ის)
+
+შექმენით კლასი რომელიც მოწყობილობების კოლექციას ინახავს Hashmap<string,Device>-ის გამოყენებით, სადაც key არის მოწყობილობის 
+ID  and value არის თავად Device  ობიექტი.
+ასევე გააჩნია addDevice, removeDevice, getDevice, listDevices, iterator-ის შესაძლებლობა ყელა არსებულ მოწყობილობაზე.
+
+დააიმპლემენტირეთ inner კლასი SmartHomeSystem-ში სახელით DeviceIterator, რომელიც implement-ს გაუკეთებს  iterator<Device> 
+ინტერფეისს და გადაუყვება დივაისებს სიტემაში.
+
+შექმენით Sortbyname კლასი, რომელიც დააიმპლემენტირებს Comparator<Device> და საშუალებას მოგვცემს დივაისებს სახელი დავასორტიროთ.
+
+შექმენით Swing GUI რომელიც საშუალებას მიცემს მომხმარებელს დაამატონ მოწყობილობები, დაინახონ მოწყობილობების სია(დასორტირებულად)
+ , გააკონტროლონ მოწყობილობები.
+
+
+
